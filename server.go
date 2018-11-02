@@ -67,6 +67,11 @@ func (s *Server) SetAllowUpgrades(allow bool) {
 	s.eio.SetAllowUpgrades(allow)
 }
 
+// SetEnableCompression sets whether the server should try server should attempt to negotiate compression on the transport upgrade. Default is false.
+func (s *Server) SetEnableCompression(enable bool) {
+	s.eio.SetEnableCompression(enable)
+}
+
 // SetCookie sets the name of the cookie used by engine.io. Default is "io".
 func (s *Server) SetCookie(prefix string) {
 	s.eio.SetCookie(prefix)
